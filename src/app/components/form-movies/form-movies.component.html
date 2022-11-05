@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+
+<div style="display: grid; place-content: center; margin-top: 20px;">
+<form (submit)="addMovie(newTitle, newDate, newDescription, newImage)" style="width: 30rem;">
+
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Título</label>
+    <input type="text" class="form-control" id="title" #newTitle>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleFormControlInput2" class="form-label">Año</label>
+    <input type="text" class="form-control" id="date" #newDate>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+    <textarea class="form-control" id="description" rows="3" #newDescription></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleFormControlInput2" class="form-label">URL de la imagen</label>
+    <input type="text" class="form-control" id="image" #newImage>
+  </div>
+
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-primary" type="submit">Agregar</button>
+  </div>
+
+</form>
+</div>

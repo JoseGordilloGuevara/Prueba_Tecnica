@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+
+  <ul class="list-group" *ngFor="let movie of movies; let id = index" [routerLink]="['/pelicula', id]">
+    <li class="list-group-item">
+      <img class="card-img-top" src="{{movie.image}}" alt="Card image cap" style="width: 50px; float: left;">
+      <h4 style="float: left; margin-left: 10px; margin-top: 20px;">{{movie.title}} - {{movie.date}}</h4>
+      <div style="float: right;">
+        <button class="btn btn-primary">
+          Favorito
+        </button>
+        <button class="btn btn-danger" (click)="deleteMovie(movie)">
+          Eliminar
+        </button>
+      </div>
+    </li>
+  </ul>
